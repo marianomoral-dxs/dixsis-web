@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-389257241"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-389257241');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIXSIS — Agentes de IA y consultoría para contact centers</title>
+<meta name="description" content="Agentes de IA para atención, cobranza, ventas y reclutamiento, implementados con consultoría experta. Tecnología Inconcert. Agente productivo en 4 a 8 semanas.">
+<link rel="canonical" href="https://dixsis.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DIXSIS">
+<meta property="og:locale" content="es_MX">
+<meta property="og:title" content="DIXSIS — Agentes de IA y consultoría para contact centers">
+<meta property="og:description" content="Agentes de IA para atención, cobranza, ventas y reclutamiento, implementados con consultoría experta. Agente productivo en 4 a 8 semanas.">
+<meta property="og:url" content="https://dixsis.com/">
+<meta property="og:image" content="https://dixsis.com/og-dixsis-home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F4EFE8;--cream2:#EDE7DE;--white:#FFFDF9;
+  --brown:#3B2A1E;--brown2:#5C4033;--logo:#683A19;--olive:#A09F4C;
+  --muted:#8C7B6E;--border:rgba(59,42,30,0.12);
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--cream);color:var(--brown);font-family:"DM Sans",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:400;letter-spacing:-0.01em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(244,239,232,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.nav img{height:26px;width:auto;display:block}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:14px}
+.nav ul a{text-decoration:none;color:var(--brown2)}
+.nav ul a:hover{color:var(--brown)}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;border-radius:999px;padding:12px 22px;transition:background .15s,color .15s}
+.btn-dark{background:var(--brown);color:var(--cream)}
+.btn-dark:hover{background:var(--logo)}
+.btn-line{border:1px solid var(--brown);color:var(--brown)}
+.btn-line:hover{background:var(--brown);color:var(--cream)}
+.nav .btn{padding:9px 18px;font-size:14px}
+
+/* HERO */
+.hero{padding:88px 0 96px}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(38px,5vw,60px);line-height:1.08;margin-bottom:24px}
+.hero p.lead{font-size:18px;color:var(--brown2);max-width:34em;margin-bottom:32px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.promise{margin-top:28px;font-size:14px;color:var(--muted);display:flex;align-items:center;gap:10px}
+.promise b{color:var(--brown)}
+.promise::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--olive);flex-shrink:0}
+.try{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:28px}
+.try h2{font-size:24px;margin-bottom:6px}
+.try p{font-size:14px;color:var(--muted);margin-bottom:20px}
+.try a.demo{display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none;padding:14px 0;border-top:1px solid var(--border)}
+.try a.demo:hover .demo-name{color:var(--logo)}
+.demo-name{font-weight:600;font-size:15px}
+.demo-role{font-size:13px;color:var(--muted)}
+.demo-ch{font-size:12px;color:var(--brown2);border:1px solid var(--border);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.try .all{display:block;margin-top:14px;font-size:14px;font-weight:600;text-decoration:none;color:var(--logo)}
+
+/* SECTIONS */
+section.block{padding:88px 0}
+section.alt{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.sec-head{max-width:720px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(30px,3.6vw,42px);line-height:1.15;margin-bottom:16px}
+.sec-head p{color:var(--brown2);font-size:17px}
+.mission{text-align:center;padding:72px 0}
+.mission p{font-family:"Playfair Display",serif;font-size:clamp(24px,3vw,34px);line-height:1.35;max-width:860px;margin:0 auto}
+
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px;display:flex;flex-direction:column}
+section.alt .card{background:var(--cream)}
+.card h3{font-size:21px;margin-bottom:10px}
+.card p{font-size:14.5px;color:var(--brown2);flex:1}
+.card a{margin-top:18px;font-size:14px;font-weight:600;text-decoration:none;color:var(--logo)}
+.card a:hover{text-decoration:underline}
+.cards.three{grid-template-columns:repeat(3,1fr)}
+.sec-cta{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
+
+.about{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+.about h2{font-size:clamp(30px,3.6vw,42px);line-height:1.15}
+.about p{color:var(--brown2);font-size:16.5px}
+.about p+p{margin-top:16px}
+.facts{display:flex;gap:40px;margin-top:32px;flex-wrap:wrap}
+.fact b{display:block;font-family:"Playfair Display",serif;font-weight:400;font-size:30px;color:var(--brown)}
+.fact span{font-size:13px;color:var(--muted)}
+
+/* FAQ */
+.faq{max-width:800px}
+details{border-top:1px solid var(--border);padding:22px 0}
+details:last-child{border-bottom:1px solid var(--border)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:24px;font-weight:600;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:400;font-size:22px;line-height:1;color:var(--muted);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p,details ul{margin-top:14px;color:var(--brown2);font-size:15.5px}
+details ul{padding-left:20px}
+details li+li{margin-top:6px}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:start}
+.contact h2{font-size:clamp(30px,3.6vw,42px);line-height:1.15;margin-bottom:16px}
+.contact .lead{color:var(--brown2);font-size:17px;margin-bottom:28px}
+.info{background:var(--cream);border:1px solid var(--border);border-radius:16px;padding:28px}
+.info dt{font-size:12px;font-weight:600;color:var(--muted);margin-top:18px}
+.info dt:first-child{margin-top:0}
+.info dd{font-size:15.5px}
+.info dd a{text-decoration:none}
+.info dd a:hover{text-decoration:underline}
+
+footer{padding:36px 0;font-size:13px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.foot nav{display:flex;gap:20px;flex-wrap:wrap}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--brown)}
+
+@media(max-width:960px){
+  .nav ul{display:none}
+  .hero-grid,.about,.contact{grid-template-columns:1fr;gap:40px}
+  .cards,.cards.three{grid-template-columns:1fr 1fr}
+  .hero{padding:56px 0 64px}
+  section.block{padding:64px 0}
+}
+@media(max-width:600px){
+  .cards,.cards.three{grid-template-columns:1fr}
+  .wrap{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" aria-label="DIXSIS, inicio"><img src="logo-dixsis.png" alt="DIXSIS" width="128" height="26"></a>
+    <ul>
+      <li><a href="#agentes">Agentes</a></li>
+      <li><a href="#plataforma">Plataforma</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-dark" href="https://demos.dixsis.com/">Ver demos</a>
+  </div>
+</header>
+
+<main id="inicio">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Transformamos tu experiencia del cliente con IA y consultoría experta</h1>
+      <p class="lead">Soluciones tecnológicas de Inconcert potenciadas por la experiencia consultiva de DIXSIS en Customer Service, Cobranza, Ventas y Reclutamiento.</p>
+      <div class="ctas">
+        <a class="btn btn-dark" href="#contacto">Habla con un asesor</a>
+        <a class="btn btn-line" href="https://demos.dixsis.com/">Prueba un agente en vivo</a>
+      </div>
+      <div class="promise"><span>Agente productivo en <b>4 a 8 semanas</b></span></div>
+    </div>
+    <aside class="try" aria-label="Demos en vivo">
+      <h2>Pruébalos en vivo</h2>
+      <p>Sin registro. Por chat o por voz.</p>
+      <a class="demo" href="https://demos.dixsis.com/marco.html">
+        <span><span class="demo-name">Marco</span><br><span class="demo-role">Atención al cliente</span></span>
+        <span class="demo-ch">Chat</span>
+      </a>
+      <a class="demo" href="https://demos.dixsis.com/lucia.html">
+        <span><span class="demo-name">Lucía</span><br><span class="demo-role">Cobranza</span></span>
+        <span class="demo-ch">Voz y chat</span>
+      </a>
+      <a class="demo" href="https://demos.dixsis.com/omar.html">
+        <span><span class="demo-name">Omar</span><br><span class="demo-role">Ventas telecom</span></span>
+        <span class="demo-ch">Voz y chat</span>
+      </a>
+      <a class="demo" href="https://demos.dixsis.com/ada.html">
+        <span><span class="demo-name">Ada</span><br><span class="demo-role">Admisiones universitarias</span></span>
+        <span class="demo-ch">Voz y chat</span>
+      </a>
+      <a class="all" href="https://demos.dixsis.com/">Ver los 8 demos →</a>
+    </aside>
+  </div>
+</section>
+
+<section class="alt mission">
+  <div class="wrap">
+    <p>Combinamos la tecnología líder de Inconcert con décadas de experiencia consultiva para maximizar los resultados de tu operación.</p>
+  </div>
+</section>
+
+<section class="block" id="agentes">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Agentes de IA especializados, configurados por expertos</h2>
+      <p>Cuatro agentes autónomos diseñados por nuestro equipo consultivo. Cada uno está optimizado para su área, no requiere programación y se integra con tus sistemas actuales.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <h3>Atención al cliente</h3>
+        <p>Resuelve consultas frecuentes 24/7, levanta reportes y escala a un asesor humano con el contexto completo cuando hace falta.</p>
+        <a href="https://demos.dixsis.com/marco.html">Ver demo →</a>
+      </article>
+      <article class="card">
+        <h3>Cobranza</h3>
+        <p>Gestiona recordatorios de pago, negocia fechas y acuerdos y mantiene una comunicación empática con cada cliente.</p>
+        <a href="https://demos.dixsis.com/lucia.html">Ver demo →</a>
+      </article>
+      <article class="card">
+        <h3>Ventas</h3>
+        <p>Contacta prospectos, califica leads y agenda citas de forma autónoma para que tu equipo comercial se enfoque en cerrar.</p>
+        <a href="https://demos.dixsis.com/omar.html">Ver demo →</a>
+      </article>
+      <article class="card">
+        <h3>Reclutamiento</h3>
+        <p>Automatiza el filtro inicial de candidatos, agenda entrevistas y califica perfiles 24/7. Reduce los tiempos de contratación hasta en 60%.</p>
+        <a href="#contacto">Pregúntanos por este caso →</a>
+      </article>
+    </div>
+    <div class="sec-cta">
+      <a class="btn btn-dark" href="https://demos.dixsis.com/">Ver todos los demos</a>
+      <a class="btn btn-line" href="#contacto">Encuentra tu caso de uso</a>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="plataforma">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Plataforma omnicanal completa de Inconcert</h2>
+      <p>Tecnología cloud flexible y escalable, desarrollada internamente por Inconcert. Un ecosistema completo que transforma la experiencia de tus clientes desde el primer día, con certificaciones de seguridad internacionales.</p>
+    </div>
+    <div class="cards three">
+      <article class="card">
+        <h3>Inconnect</h3>
+        <p>Contact center omnicanal en la nube que integra voz, chat, email, WhatsApp y redes sociales en una sola interfaz.</p>
+      </article>
+      <article class="card">
+        <h3>Infunnel</h3>
+        <p>Automatización de marketing sin código: captura de leads, gestión de citas en línea y flujos integrados con WhatsApp, Meta y Google.</p>
+      </article>
+      <article class="card">
+        <h3>Inspeech, Intrack e Inteam</h3>
+        <p>Análisis conversacional con más de 95% de precisión, gestión de tickets y workforce management, integrados de punta a punta.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="nosotros">
+  <div class="wrap about">
+    <h2>Parte del grupo Inconcert, con experiencia consultiva</h2>
+    <div>
+      <p>DIXSIS es la empresa del grupo Inconcert que combina las soluciones de CX más avanzadas con IA generativa y la experiencia de expertos en Customer Service y Televentas.</p>
+      <p>Nuestros socios aportan décadas de conocimiento en optimización de operaciones. Por eso no solo implementamos tecnología: transformamos resultados.</p>
+      <div class="facts">
+        <div class="fact"><b>+25</b><span>países con presencia</span></div>
+        <div class="fact"><b>ISO/IEC 42001</b><span>uso responsable de IA</span></div>
+        <div class="fact"><b>4–8 semanas</b><span>a un agente productivo</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Preguntas frecuentes</h2>
+      <p>Si tienes otra duda, escríbenos por el chat o a info@dixsis.com.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿Qué agentes de IA ofrecen?</summary>
+        <ul>
+          <li><b>Atención al cliente:</b> resuelve consultas frecuentes, gestiona tickets y escala casos complejos con más de 95% de precisión.</li>
+          <li><b>Cobranza:</b> gestiona recordatorios de pago, negocia acuerdos y mantiene una comunicación empática.</li>
+          <li><b>Ventas:</b> contacta prospectos, califica leads y agenda demostraciones de forma autónoma.</li>
+          <li><b>Reclutamiento:</b> filtra candidatos, agenda entrevistas y califica perfiles 24/7.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>¿Qué diferencia a DIXSIS de otras empresas de tecnología CX?</summary>
+        <p>Combinamos la tecnología líder de Inconcert con décadas de experiencia consultiva en Customer Service y Televentas. No solo implementamos software: diseñamos la estrategia completa para obtener resultados medibles desde el primer día.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tiempo toma la implementación?</summary>
+        <p>Un agente de IA puede estar productivo en un plazo de 4 a 8 semanas, según la complejidad de tu operación y de las integraciones necesarias. Nuestro equipo consultivo te acompaña en cada etapa.</p>
+      </details>
+      <details>
+        <summary>¿En qué sectores tienen experiencia?</summary>
+        <p>Trabajamos con empresas medianas y grandes de telecomunicaciones, finanzas, salud, educación, retail y seguros. Nuestros agentes y soluciones omnicanal se adaptan a cada vertical.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="contacto">
+  <div class="wrap contact">
+    <div>
+      <h2>¿Listo para transformar tu experiencia del cliente?</h2>
+      <p class="lead">En 30 minutos te decimos si tu caso de uso tiene solución, cómo lo construiríamos y cuánto costaría. Escríbenos ahora por el chat de la esquina inferior de tu pantalla, o por el medio que prefieras.</p>
+      <a class="btn btn-dark" href="mailto:info@dixsis.com?subject=Quiero%20saber%20m%C3%A1s%20sobre%20agentes%20IA">Escríbenos a info@dixsis.com</a>
+    </div>
+    <dl class="info">
+      <dt>Correo</dt>
+      <dd><a href="mailto:info@dixsis.com">info@dixsis.com</a></dd>
+      <dt>Teléfono</dt>
+      <dd><a href="tel:+525588544108">+52 55 8854 4108</a></dd>
+      <dt>Oficina</dt>
+      <dd>Blvd. Manuel Ávila Camacho 36, Piso 10, Lomas Virreyes, Miguel Hidalgo, 11000, Ciudad de México</dd>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 DIXSIS, S.A. de C.V. Todos los derechos reservados.</div>
+    <nav>
+      <a href="https://demos.dixsis.com/">Demos</a>
+      <a href="https://www.linkedin.com/company/dixsis/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://demos.dixsis.com/aviso-privacidad.html">Aviso de privacidad</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- AVISO DE COOKIES -->
+<div id="dx-cookies" role="region" aria-label="Aviso de cookies" style="display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:24px;z-index:9998;width:calc(100% - 32px);max-width:520px;background:#3B2A1E;color:#F4EFE8;border-radius:14px;padding:14px 18px;font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.5;box-shadow:0 8px 24px rgba(0,0,0,0.18);align-items:center;gap:14px">
+  <span style="flex:1">Usamos cookies de Google Ads para medir visitas y mejorar nuestras campañas. Puedes desactivarlas desde la configuración de tu navegador. Más información en nuestro <a href="https://demos.dixsis.com/aviso-privacidad.html" style="color:#F4EFE8;text-decoration:underline">Aviso de privacidad</a>.</span>
+  <button type="button" id="dx-cookies-ok" style="flex-shrink:0;background:#F4EFE8;color:#3B2A1E;border:0;border-radius:999px;padding:8px 16px;font:600 13px 'DM Sans',sans-serif;cursor:pointer">Entendido</button>
+</div>
+<style>@media(max-width:1000px){#dx-cookies{bottom:100px!important}}</style>
+<script>
+(function(){
+  var b=document.getElementById('dx-cookies'),k='dx-cookies-ok',seen=false;
+  try{seen=localStorage.getItem(k)==='1'}catch(e){}
+  if(!seen)b.style.display='flex';
+  document.getElementById('dx-cookies-ok').onclick=function(){
+    b.style.display='none';try{localStorage.setItem(k,'1')}catch(e){}
+  };
+})();
+</script>
+
+<!-- WEBCHAT DIXSIS (Valeria) -->
+<script>
+(function(){
+  var s=document.createElement("script");
+  s.src="https://s3.us-east-1.amazonaws.com/webchat.us1.bundles/channel-bundles/dc24e94a-8b77-4947-bf45-ea1d9beeaec5/89056d0f-8707-4a1b-8319-26142d73d113/89056d0f-8707-4a1b-8319-26142d73d113.bundle.js";
+  s.async=true;s.charset="UTF-8";
+  s.onload=function(){window.Webchat.init()};
+  document.head.appendChild(s);
+})();
+</script>
+
+</body>
+</html>
