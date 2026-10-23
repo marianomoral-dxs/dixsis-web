@@ -11,370 +11,520 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIXSIS — Agentes de IA y consultoría para contact centers</title>
-<meta name="description" content="Agentes de IA para atención al cliente, cobranza, ventas y agenda de citas, implementados con consultoría experta. Tecnología Inconcert. Productivo en 4 a 8 semanas.">
-<link rel="canonical" href="https://dixsis.com/">
+<title>Demos IA — Dixsis by inConcert</title>
+<meta name="description" content="Prueba en vivo agentes de IA para contact center: atención, cobranza, ventas, citas y admisiones. Chat y voz, sin registro. Demos de Dixsis sobre inConcert.">
+<link rel="canonical" href="https://demos.dixsis.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="DIXSIS">
+<meta property="og:site_name" content="Dixsis · Demos IA">
 <meta property="og:locale" content="es_MX">
-<meta property="og:title" content="DIXSIS — Agentes de IA y consultoría para contact centers">
-<meta property="og:description" content="Agentes de IA para atención al cliente, cobranza, ventas y agenda de citas, implementados con consultoría experta. Agente productivo en 4 a 8 semanas.">
-<meta property="og:url" content="https://dixsis.com/">
-<meta property="og:image" content="https://dixsis.com/og-dixsis-home.png">
+<meta property="og:title" content="Demos IA — Dixsis by inConcert">
+<meta property="og:description" content="Prueba en vivo agentes de IA para contact center: atención, cobranza, ventas, citas y admisiones. Chat y voz, sin registro. Demos de Dixsis sobre inConcert.">
+<meta property="og:url" content="https://demos.dixsis.com/">
+<meta property="og:image" content="https://demos.dixsis.com/og-dixsis.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --cream:#F4EFE8;--cream2:#EDE7DE;--white:#FFFDF9;
-  --brown:#3B2A1E;--brown2:#5C4033;--logo:#683A19;--olive:#A09F4C;
-  --muted:#8C7B6E;--border:rgba(59,42,30,0.12);
-}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{background:var(--cream);color:var(--brown);font-family:"DM Sans",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-h1,h2,h3{font-family:"Playfair Display",serif;font-weight:400;letter-spacing:-0.01em}
-.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream:   #F4EFE8;
+    --cream2:  #EDE7DE;
+    --cream3:  #E4DDD3;
+    --brown:   #3B2A1E;
+    --brown2:  #5C4033;
+    --rust:    #7A4A2E;
+    --rust2:   #9B5E3A;
+    --muted:   #8C7B6E;
+    --border:  rgba(59,42,30,0.10);
+    --border2: rgba(59,42,30,0.18);
+    --radius:  14px;
+    --radius-sm: 9px;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--brown);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    min-height: 100vh;
+  }
 
-/* NAV */
-header{position:sticky;top:0;z-index:50;background:rgba(244,239,232,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
-.nav img{height:26px;width:auto;display:block}
-.nav ul{display:flex;gap:28px;list-style:none;font-size:14px}
-.nav ul a{text-decoration:none;color:var(--brown2)}
-.nav ul a:hover{color:var(--brown)}
-.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;border-radius:999px;padding:12px 22px;transition:background .15s,color .15s}
-.btn-dark{background:var(--brown);color:var(--cream)}
-.btn-dark:hover{background:var(--logo)}
-.btn-line{border:1px solid var(--brown);color:var(--brown)}
-.btn-line:hover{background:var(--brown);color:var(--cream)}
-.nav .btn{padding:9px 18px;font-size:14px}
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(244,239,232,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1100px; margin: 0 auto; padding: 18px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { text-decoration: none; display: flex; align-items: baseline; gap: 10px; }
+  .logo-name {
+    font-family: 'DM Sans', sans-serif; font-weight: 700;
+    font-size: 20px; letter-spacing: -0.02em; color: var(--brown);
+  }
+  .logo-name span { color: var(--rust); }
+  .logo-sep { color: var(--muted); font-size: 14px; }
+  .logo-sub { font-size: 13px; color: var(--muted); font-weight: 400; }
+  .nav-cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--brown); color: var(--cream); border: none;
+    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+    padding: 9px 18px; border-radius: 50px; cursor: pointer; text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--brown2); }
 
-/* HERO */
-.hero{padding:88px 0 96px}
-.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:center}
-.hero h1{font-size:clamp(38px,5vw,60px);line-height:1.08;margin-bottom:24px}
-.hero p.lead{font-size:18px;color:var(--brown2);max-width:34em;margin-bottom:32px}
-.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
-.promise{margin-top:28px;font-size:14px;color:var(--muted);display:flex;align-items:center;gap:10px}
-.promise b{color:var(--brown)}
-.promise::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--olive);flex-shrink:0}
-.try{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:28px}
-.try h2{font-size:24px;margin-bottom:6px}
-.try p{font-size:14px;color:var(--muted);margin-bottom:20px}
-.try a.demo{display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none;padding:14px 0;border-top:1px solid var(--border)}
-.try a.demo:hover .demo-name{color:var(--logo)}
-.demo-name{font-weight:600;font-size:15px}
-.demo-role{font-size:13px;color:var(--muted)}
-.demo-ch{font-size:12px;color:var(--brown2);border:1px solid var(--border);border-radius:999px;padding:3px 10px;white-space:nowrap}
-.try .all{display:block;margin-top:14px;font-size:14px;font-weight:600;text-decoration:none;color:var(--logo)}
+  /* HERO */
+  .hero { padding: 80px 28px 64px; max-width: 1100px; margin: 0 auto; }
+  .hero-eyebrow {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--rust); margin-bottom: 20px; display: block;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 700; line-height: 1.08;
+    color: var(--brown); margin-bottom: 20px; max-width: 700px;
+  }
+  .hero h1 em { font-style: italic; color: var(--rust); }
+  .hero-sub {
+    font-size: 16px; color: var(--muted); max-width: 520px;
+    line-height: 1.7; margin-bottom: 36px;
+  }
+  .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill {
+    font-size: 12px; padding: 6px 14px; border-radius: 50px;
+    border: 1px solid var(--border2); color: var(--muted);
+    background: rgba(255,255,255,0.5);
+  }
 
-/* SECTIONS */
-section.block{padding:88px 0}
-section.alt{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.sec-head{max-width:720px;margin-bottom:48px}
-.sec-head h2{font-size:clamp(30px,3.6vw,42px);line-height:1.15;margin-bottom:16px}
-.sec-head p{color:var(--brown2);font-size:17px}
-.mission{text-align:center;padding:72px 0}
-.mission p{font-family:"Playfair Display",serif;font-size:clamp(24px,3vw,34px);line-height:1.35;max-width:860px;margin:0 auto}
+  /* SECTION */
+  .section { max-width: 1100px; margin: 0 auto; padding: 0 28px 72px; }
+  .section-head { margin-bottom: 32px; }
+  .section-label {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px; font-weight: 600; color: var(--brown);
+  }
 
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px;display:flex;flex-direction:column}
-section.alt .card{background:var(--cream)}
-.card h3{font-size:21px;margin-bottom:10px}
-.card p{font-size:14.5px;color:var(--brown2);flex:1}
-.card a{margin-top:18px;font-size:14px;font-weight:600;text-decoration:none;color:var(--logo)}
-.card a:hover{text-decoration:underline}
-.cards.three{grid-template-columns:repeat(3,1fr)}
-.sec-cta{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
+  /* DIVIDER */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 8px 28px 56px; max-width: 1100px; margin-left: auto; margin-right: auto; }
 
-.about{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
-.about h2{font-size:clamp(30px,3.6vw,42px);line-height:1.15}
-.about p{color:var(--brown2);font-size:16.5px}
-.about p+p{margin-top:16px}
-.facts{display:flex;gap:40px;margin-top:32px;flex-wrap:wrap}
-.fact b{display:block;font-family:"Playfair Display",serif;font-weight:400;font-size:30px;color:var(--brown)}
-.fact span{font-size:13px;color:var(--muted)}
+  /* GRID */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 18px; }
 
-.about-img{width:100%;height:auto;border-radius:20px;display:block}
-.about{align-items:center}
-.about h2{margin-bottom:20px}
-.certs{list-style:none;display:flex;flex-wrap:wrap;gap:12px}
-.certs li{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:14px 18px;display:flex;flex-direction:column;min-width:150px}
-.certs b{font-family:"Playfair Display",serif;font-weight:400;font-size:20px}
-.certs span{font-size:12.5px;color:var(--muted)}
-.certs .cert-main{background:var(--brown);border-color:var(--brown)}
-.certs .cert-main b{color:var(--cream);font-size:22px}
-.certs .cert-main span{color:#D9CFC3}
+  /* CARD */
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    display: flex; flex-direction: column;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  }
+  .card:hover {
+    border-color: var(--border2);
+    box-shadow: 0 4px 24px rgba(59,42,30,0.07);
+    transform: translateY(-2px);
+  }
+  .card-top {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .avatar {
+    width: 52px; height: 52px; border-radius: 13px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .avatar.a { background: #EFF4FF; color: #3B6FD4; border: 1px solid rgba(59,111,212,0.15); }
+  .avatar.b { background: #F0FAF4; color: #2E8A57; border: 1px solid rgba(46,138,87,0.15); }
+  .avatar.c { background: #FDF3EC; color: var(--rust); border: 1px solid rgba(122,74,46,0.15); }
 
-/* FAQ */
-.faq{max-width:800px}
-details{border-top:1px solid var(--border);padding:22px 0}
-details:last-child{border-bottom:1px solid var(--border)}
-summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:24px;font-weight:600;font-size:17px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-weight:400;font-size:22px;line-height:1;color:var(--muted);transition:transform .2s}
-details[open] summary::after{transform:rotate(45deg)}
-details p,details ul{margin-top:14px;color:var(--brown2);font-size:15.5px}
-details ul{padding-left:20px}
-details li+li{margin-top:6px}
+  .live-badge {
+    display: flex; align-items: center; gap: 5px;
+    font-size: 11px; font-weight: 500; color: #2E8A57;
+    background: #EEF8F2; border: 1px solid rgba(46,138,87,0.2);
+    padding: 4px 10px; border-radius: 20px;
+  }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: #2E8A57; animation: pulse 1.8s ease infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
 
-/* CONTACT */
-.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:start}
-.contact h2{font-size:clamp(30px,3.6vw,42px);line-height:1.15;margin-bottom:16px}
-.contact .lead{color:var(--brown2);font-size:17px;margin-bottom:28px}
-.info{background:var(--cream);border:1px solid var(--border);border-radius:16px;padding:28px}
-.info dt{font-size:12px;font-weight:600;color:var(--muted);margin-top:18px}
-.info dt:first-child{margin-top:0}
-.info dd{font-size:15.5px}
-.info dd a{text-decoration:none}
-.info dd a:hover{text-decoration:underline}
+  .card-name {
+    font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700;
+    color: var(--brown); margin-bottom: 3px;
+  }
+  .card-role { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .card-desc { font-size: 13.5px; color: #6B5A50; line-height: 1.65; margin-bottom: 18px; flex: 1; }
 
-footer{padding:36px 0;font-size:13px;color:var(--muted)}
-.foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.foot nav{display:flex;gap:20px;flex-wrap:wrap}
-.foot a{text-decoration:none}
-.foot a:hover{color:var(--brown)}
+  .star-box {
+    display: flex; gap: 10px; align-items: flex-start;
+    background: var(--cream); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 11px 13px; margin-bottom: 18px;
+  }
+  .star-ico { font-size: 13px; flex-shrink: 0; }
+  .star-lbl { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 2px; }
+  .star-val { font-size: 12.5px; font-weight: 500; color: var(--brown2); }
 
-@media(max-width:960px){
-  .nav ul{display:none}
-  .hero-grid,.about,.contact{grid-template-columns:1fr;gap:40px}
-  .cards,.cards.three{grid-template-columns:1fr 1fr}
-  .hero{padding:56px 0 64px}
-  section.block{padding:64px 0}
-}
-@media(max-width:600px){
-  .cards,.cards.three{grid-template-columns:1fr}
-  .wrap{padding:0 20px}
-}
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 22px; }
+  .tag {
+    font-size: 11px; padding: 4px 9px; border-radius: 6px;
+    border: 1px solid var(--border); color: var(--muted);
+    background: var(--cream);
+  }
+
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+    width: 100%; padding: 12px 18px; border-radius: var(--radius-sm);
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
+    cursor: pointer; text-decoration: none; border: none;
+    transition: opacity 0.15s, transform 0.15s;
+  }
+  .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+  .btn.primary { background: var(--brown); color: var(--cream); }
+
+  /* UPCOMING */
+  .card.upcoming { background: var(--cream2); opacity: 0.65; }
+  .card.upcoming:hover { transform: none; box-shadow: none; }
+  .skel { height: 10px; border-radius: 4px; background: var(--cream3); margin-bottom: 7px; }
+  .btn.ghost {
+    background: transparent; border: 1px solid var(--border2);
+    color: var(--muted); cursor: default;
+  }
+  .btn.ghost:hover { transform: none; opacity: 1; }
+
+  /* HOW */
+  .how-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+  .how-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 20px;
+  }
+  .how-num {
+    font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700;
+    color: var(--rust); opacity: 0.35; line-height: 1; margin-bottom: 10px;
+  }
+  .how-title { font-size: 14px; font-weight: 500; color: var(--brown); margin-bottom: 5px; }
+  .how-desc { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border); padding: 28px;
+    text-align: center; color: var(--muted); font-size: 12.5px;
+  }
+  footer a { color: var(--rust); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .hero { padding: 52px 20px 44px; }
+    .section { padding: 0 20px 52px; }
+    .grid { grid-template-columns: 1fr; }
+    .how-grid { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <a href="#inicio" aria-label="DIXSIS, inicio"><img src="logo-dixsis.png" alt="DIXSIS" width="128" height="26"></a>
-    <ul>
-      <li><a href="#agentes">Agentes</a></li>
-      <li><a href="#plataforma">Plataforma</a></li>
-      <li><a href="#seguridad">Seguridad</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#faq">Preguntas</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <a class="btn btn-dark" href="https://demos.dixsis.com/">Ver demos</a>
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="https://demos.dixsis.com/">
+      <span class="logo-name">DIX<span>SIS</span></span>
+      <span class="logo-sep">·</span>
+      <span class="logo-sub">Demos IA</span>
+    </a>
+    <a class="nav-cta" href="https://dixsis.com" target="_blank">Sitio principal</a>
   </div>
-</header>
+</nav>
 
-<main id="inicio">
+<div class="hero">
+  <span class="hero-eyebrow">Agentes de IA conversacional · inAgent</span>
+  <h1>Así se ve la IA<br>trabajando <em>en vivo</em></h1>
+  <p class="hero-sub">
+    Conversa directamente con agentes construidos sobre inConcert inAgent.
+    Cada uno demuestra una capacidad diferente de la plataforma.
+  </p>
+  <div class="hero-pills">
+    <span class="pill">Conversaciones reales, sin guión</span>
+    <span class="pill">Powered by GPT-4o mini</span>
+    <span class="pill">Datos ficticios para demo</span>
+  </div>
+</div>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <h1>Transformamos tu experiencia del cliente con IA y consultoría experta</h1>
-      <p class="lead">Soluciones tecnológicas de Inconcert potenciadas por la experiencia consultiva de DIXSIS en Customer Service, Cobranza y Ventas.</p>
-      <div class="ctas">
-        <a class="btn btn-dark" href="#contacto">Habla con un asesor</a>
-        <a class="btn btn-line" href="https://demos.dixsis.com/">Prueba un agente en vivo</a>
+<div class="section">
+  <div class="section-head">
+    <div class="section-label">Disponibles ahora</div>
+    <div class="section-title">Agentes activos</div>
+  </div>
+  <div class="grid">
+
+    <!-- MARCO -->
+    <div class="card">
+      <div class="card-top">
+        <div class="avatar a">M</div>
+        <span class="live-badge"><span class="live-dot"></span>En vivo</span>
       </div>
-      <div class="promise"><span>Agente productivo en <b>4 a 8 semanas</b></span></div>
+      <div class="card-name">Marco</div>
+      <div class="card-role">Asistente de Atención al Cliente · LumenMX</div>
+      <div class="card-desc">Resuelve dudas sobre tu cuenta de servicios, reporta fallas y consulta reportes. Sabe cuándo escalar y lo hace con contexto completo.</div>
+      <div class="star-box">
+        <div class="star-ico">⭐</div>
+        <div>
+          <div class="star-lbl">Capacidad estrella</div>
+          <div class="star-val">RAG con bases de conocimiento + escalamiento inteligente</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">Utilities</span>
+        <span class="tag">RAG · PDF + FAQ</span>
+        <span class="tag">Mock APIs</span>
+      </div>
+      <a class="btn primary" href="marco.html" target="_blank">💬 Chatear con Marco</a>
     </div>
-    <aside class="try" aria-label="Demos en vivo">
-      <h2>Pruébalos en vivo</h2>
-      <p>Sin registro. Por chat o por voz.</p>
-      <a class="demo" href="https://demos.dixsis.com/marco.html">
-        <span><span class="demo-name">Marco</span><br><span class="demo-role">Atención al cliente</span></span>
-        <span class="demo-ch">Chat</span>
-      </a>
-      <a class="demo" href="https://demos.dixsis.com/lucia.html">
-        <span><span class="demo-name">Lucía</span><br><span class="demo-role">Cobranza</span></span>
-        <span class="demo-ch">Voz y chat</span>
-      </a>
-      <a class="demo" href="https://demos.dixsis.com/omar.html">
-        <span><span class="demo-name">Omar</span><br><span class="demo-role">Ventas telecom</span></span>
-        <span class="demo-ch">Voz y chat</span>
-      </a>
-      <a class="demo" href="https://demos.dixsis.com/ada.html">
-        <span><span class="demo-name">Ada</span><br><span class="demo-role">Admisiones universitarias</span></span>
-        <span class="demo-ch">Voz y chat</span>
-      </a>
-      <a class="all" href="https://demos.dixsis.com/">Ver los 8 demos →</a>
-    </aside>
-  </div>
-</section>
 
-<section class="alt mission">
-  <div class="wrap">
-    <p>Combinamos la tecnología líder de Inconcert con décadas de experiencia consultiva para maximizar los resultados de tu operación.</p>
-  </div>
-</section>
+    <!-- ANDREA -->
+    <div class="card">
+      <div class="card-top">
+        <div class="avatar b">A</div>
+        <span class="live-badge"><span class="live-dot"></span>En vivo</span>
+      </div>
+      <div class="card-name">Andrea</div>
+      <div class="card-role">Recepcionista Virtual · MediPlus Clínica</div>
+      <div class="card-desc">Agenda, cancela y reagenda citas médicas con múltiples doctores. Identifica pacientes existentes y confirma automáticamente en Google Calendar.</div>
+      <div class="star-box">
+        <div class="star-ico">⭐</div>
+        <div>
+          <div class="star-lbl">Capacidad estrella</div>
+          <div class="star-val">Multi-agente orquestado + integración Google Calendar</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">Salud</span>
+        <span class="tag">Multi-agente</span>
+        <span class="tag">Google Calendar</span>
+        <span class="tag">Make</span>
+      </div>
+      <a class="btn primary" href="andrea.html" target="_blank">💬 Chatear con Andrea</a>
+    </div>
 
-<section class="block" id="agentes">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Agentes de IA especializados, configurados por expertos</h2>
-      <p>Agentes virtuales completamente autónomos diseñados por nuestro equipo consultivo. Cada uno está optimizado para su área, no requiere programación y se integra con tus sistemas actuales.</p>
+    <!-- SOFÍA -->
+    <div class="card">
+      <div class="card-top">
+        <div class="avatar c">S</div>
+        <span class="live-badge"><span class="live-dot"></span>En vivo</span>
+      </div>
+      <div class="card-name">Sofía</div>
+      <div class="card-role">Asesora Inmobiliaria · Demo Inmobiliaria</div>
+      <div class="card-desc">Califica leads, presenta desarrollos disponibles y agenda visitas. Demuestra el handoff fluido entre agentes especializados en una sola conversación.</div>
+      <div class="star-box">
+        <div class="star-ico">⭐</div>
+        <div>
+          <div class="star-lbl">Capacidad estrella</div>
+          <div class="star-val">Orquestación multi-agente con cambio de avatar</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">Inmobiliaria</span>
+        <span class="tag">Orquestación</span>
+        <span class="tag">CRM mock</span>
+      </div>
+      <a class="btn primary" href="sofia.html" target="_blank">💬 Chatear con Sofía</a>
     </div>
-    <div class="cards">
-      <article class="card">
-        <h3>Atención al cliente</h3>
-        <p>Resuelve consultas frecuentes 24/7, levanta reportes y escala a un asesor humano con el contexto completo cuando hace falta.</p>
-        <a href="https://demos.dixsis.com/marco.html">Ver demo →</a>
-      </article>
-      <article class="card">
-        <h3>Cobranza</h3>
-        <p>Gestiona recordatorios de pago, negocia fechas y acuerdos y mantiene una comunicación empática con cada cliente.</p>
-        <a href="https://demos.dixsis.com/lucia.html">Ver demo →</a>
-      </article>
-      <article class="card">
-        <h3>Ventas</h3>
-        <p>Contacta prospectos, califica leads y agenda citas de forma autónoma para que tu equipo comercial se enfoque en cerrar.</p>
-        <a href="https://demos.dixsis.com/omar.html">Ver demo →</a>
-      </article>
-      <article class="card">
-        <h3>Agenda de citas</h3>
-        <p>Agenda, cancela y reagenda citas con varios especialistas, identifica a pacientes o clientes existentes y confirma directo en tu calendario.</p>
-        <a href="https://demos.dixsis.com/andrea.html">Ver demo →</a>
-      </article>
-    </div>
-    <div class="sec-cta">
-      <a class="btn btn-dark" href="https://demos.dixsis.com/">Ver todos los demos</a>
-      <a class="btn btn-line" href="#contacto">Encuentra tu caso de uso</a>
-    </div>
-  </div>
-</section>
 
-<section class="block alt" id="plataforma">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Plataforma omnicanal completa de Inconcert</h2>
-      <p>Tecnología cloud flexible y escalable, desarrollada internamente por Inconcert. Un ecosistema completo que transforma la experiencia de tus clientes desde el primer día, con certificaciones de seguridad internacionales.</p>
+    <!-- OMAR -->
+    <div class="card">
+      <div class="card-top">
+        <div class="avatar" style="background:rgba(107,79,187,0.10);color:#6B4FBB;border:1px solid rgba(107,79,187,0.2);">O</div>
+        <span class="live-badge"><span class="live-dot"></span>En vivo</span>
+      </div>
+      <div class="card-name">Omar</div>
+      <div class="card-role">Asesor Virtual · inConcert Móvil</div>
+      <div class="card-desc">Conoce los planes de fibra óptica y móviles 5G, califica tu perfil y agenda una cita. Disponible por chat de texto o por llamada de voz desde el navegador.</div>
+      <div class="star-box">
+        <div class="star-ico">⭐</div>
+        <div>
+          <div class="star-lbl">Capacidad estrella</div>
+          <div class="star-val">Webchat + WebCall — texto y voz en el mismo agente</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">Telecomunicaciones</span>
+        <span class="tag">Chat + Voz</span>
+        <span class="tag">Lead qualification</span>
+      </div>
+      <a class="btn primary" href="omar.html" target="_blank">💬📞 Chatear o Llamar a Omar</a>
     </div>
-    <div class="cards">
-      <article class="card">
-        <h3>Inagent</h3>
-        <p>Agentes de IA autónomos para voz, chat y WhatsApp que se integran a tus sistemas y escalan a un humano con el contexto completo.</p>
-      </article>
-      <article class="card">
-        <h3>Inconnect</h3>
-        <p>Contact center omnicanal en la nube que integra voz, chat, email, WhatsApp y redes sociales en una sola interfaz.</p>
-      </article>
-      <article class="card">
-        <h3>Infunnel</h3>
-        <p>Automatización de marketing sin código: captura de leads, gestión de citas en línea y flujos integrados con WhatsApp, Meta y Google.</p>
-      </article>
-      <article class="card">
-        <h3>Inspeech, Intrack e Inteam</h3>
-        <p>Análisis conversacional con más de 95% de precisión, gestión de tickets y workforce management, integrados de punta a punta.</p>
-      </article>
-    </div>
-  </div>
-</section>
 
-<section class="block" id="seguridad">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Agentes construidos sobre una plataforma certificada</h2>
-      <p>Como empresa del grupo Inconcert, construimos cada agente sobre la plataforma de nuestro grupo, certificada ISO/IEC 42001:2023 en gestión responsable de IA: la primera empresa de software para CX en España en obtenerla.</p>
+    <!-- NOVA FIBRA TELCO -->
+    <div class="card">
+      <div class="card-top">
+        <div class="avatar" style="background:rgba(65,88,208,0.10);color:#4158D0;border:1px solid rgba(65,88,208,0.2);">N</div>
+        <span class="live-badge"><span class="live-dot"></span>En vivo</span>
+      </div>
+      <div class="card-name">Nova Fibra Telco</div>
+      <div class="card-role">Contact Center Virtual · NovaFibra ISP</div>
+      <div class="card-desc">Reporta tu falla de internet y Nova te identifica, diagnostica, reinicia tu equipo de forma remota y escala con contexto completo si no resuelve.</div>
+      <div class="star-box">
+        <div class="star-ico">⭐</div>
+        <div>
+          <div class="star-lbl">Capacidad estrella</div>
+          <div class="star-val">4 agentes especializados + identificación automática + reinicio remoto</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">Telecomunicaciones</span>
+        <span class="tag">Multi-agente</span>
+        <span class="tag">Soporte técnico</span>
+      </div>
+      <a class="btn primary" href="novafibra.html" target="_blank">💬 Chatear con Nova</a>
     </div>
-    <ul class="certs">
-      <li class="cert-main"><b>ISO/IEC 42001:2023</b><span>Gestión responsable de IA</span></li>
-      <li><b>ISO 27001</b><span>Seguridad de la información</span></li>
-      <li><b>CSA</b><span>Trusted Cloud Provider</span></li>
-      <li><b>PCI</b><span>Security Standards Council</span></li>
-      <li><b>STAR</b><span>Level One</span></li>
-      <li><b>GDPR</b><span>Protección de datos</span></li>
-      <li><b>CCSK</b><span>Cloud Security Knowledge</span></li>
-    </ul>
-  </div>
-</section>
 
-<section class="block alt" id="nosotros">
-  <div class="wrap about">
-    <img class="about-img" src="mapa-grupo.svg" alt="Presencia del grupo Inconcert: Ciudad de México conectada con Miami, Bogotá, Lima, Montevideo y Madrid" width="560" height="420">
+    <!-- LUCÍA -->
+    <div class="card">
+      <div class="card-top">
+        <div class="avatar" style="background:rgba(192,69,106,0.10);color:#C0456A;border:1px solid rgba(192,69,106,0.2);">L</div>
+        <span class="live-badge"><span class="live-dot"></span>En vivo</span>
+      </div>
+      <div class="card-name">Lucía</div>
+      <div class="card-role">Asesora de Cobranza · inConcert</div>
+      <div class="card-desc">Gestiona cobros outbound con tono cálido y respuestas breves. Identifica al titular, negocia la fecha de pago, genera cupones y tipifica cada interacción automáticamente.</div>
+      <div class="star-box">
+        <div class="star-ico">⭐</div>
+        <div>
+          <div class="star-lbl">Capacidad estrella</div>
+          <div class="star-val">Flujo de cobranza completo · voz + chat · tipificación automática</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">Cobranza</span>
+        <span class="tag">WebCall · Voz</span>
+        <span class="tag">Webchat</span>
+        <span class="tag">Promesa de pago</span>
+      </div>
+      <a class="btn primary" href="lucia.html" target="_blank">💬📞 Chatear o Llamar a Lucía</a>
+    </div>
+
+    <!-- ADA -->
+    <div class="card">
+      <div class="card-top">
+        <div class="avatar" style="background:rgba(61,90,158,0.10);color:#3D5A9E;border:1px solid rgba(61,90,158,0.2);">A</div>
+        <span class="live-badge"><span class="live-dot"></span>En vivo</span>
+      </div>
+      <div class="card-name">Ada</div>
+      <div class="card-role">Asesora de Admisiones · Universidad Inconcert</div>
+      <div class="card-desc">Califica prospectos, consulta oferta académica en tiempo real, simula becas personalizadas, agenda visitas al campus y registra leads en CRM. España y LATAM.</div>
+      <div class="star-box">
+        <div class="star-ico">⭐</div>
+        <div>
+          <div class="star-lbl">Capacidad estrella</div>
+          <div class="star-val">Simulación de beca + agendamiento + registro CRM · voz + chat</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">Educación</span>
+        <span class="tag">WebCall · Voz</span>
+        <span class="tag">Webchat</span>
+        <span class="tag">CRM</span>
+      </div>
+      <a class="btn primary" href="ada.html" target="_blank">💬📞 Chatear o Llamar a Ada</a>
+    </div>
+
+    <!-- VALERIA -->
+    <div class="card">
+      <div class="card-top">
+        <div class="avatar" style="background:rgba(192,69,106,0.10);color:#C0456A;border:1px solid rgba(192,69,106,0.2);">V</div>
+        <span class="live-badge"><span class="live-dot"></span>En vivo</span>
+      </div>
+      <div class="card-name">Valeria</div>
+      <div class="card-role">Precalificadora de Leads · Nextel Plus</div>
+      <div class="card-desc">Voicebot outbound de prospección fría. Precalifica al contacto en segundos y transfiere al vendedor humano si hay interés, o cierra con cortesía si no.</div>
+      <div class="star-box">
+        <div class="star-ico">⭐</div>
+        <div>
+          <div class="star-lbl">Capacidad estrella</div>
+          <div class="star-val">Cold calling automatizado + transferencia condicional a humano</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span class="tag">Ventas outbound</span>
+        <span class="tag">WebCall · Voz</span>
+        <span class="tag">Cold calling</span>
+      </div>
+      <a class="btn primary" href="valeria.html" target="_blank">📞 Llamar con Valeria</a>
+    </div>
+
+  </div>
+</div>
+
+<div style="max-width:1100px;margin:0 auto 56px;padding:0 28px;">
+  <div style="background:var(--brown);border-radius:20px;padding:40px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
     <div>
-      <h2>Somos parte del grupo Inconcert, potenciados por experiencia consultiva</h2>
-      <p>DIXSIS es la empresa del grupo Inconcert que combina las soluciones de CX más avanzadas con IA generativa y la experiencia de expertos en Customer Service y Televentas.</p>
-      <p>Nuestros socios aportan décadas de conocimiento en optimización de operaciones. Por eso no solo implementamos tecnología: transformamos resultados. Desde Ciudad de México acompañamos a empresas de México y Latinoamérica, con el respaldo de un grupo presente en más de 25 países.</p>
-      <div class="sec-cta"><a class="btn btn-dark" href="#contacto">Habla con nosotros</a></div>
+      <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.13em;color:rgba(244,239,232,0.5);margin-bottom:8px;">¿Te gustó lo que viste?</div>
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#F4EFE8;margin-bottom:8px;line-height:1.2;">Diseñamos tu agente<br>a la medida de tu operación</div>
+      <div style="font-size:14px;color:rgba(244,239,232,0.6);line-height:1.6;max-width:460px;">Cuéntanos tu caso de uso y te proponemos una solución concreta. Primera conversación sin costo.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;flex-shrink:0;">
+      <a href="contacto.html" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:10px;background:#F4EFE8;color:var(--brown);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;text-decoration:none;transition:opacity 0.15s;">🤝 Habla con un asesor de Dixsis</a>
+      <a href="mailto:info@dixsis.com?subject=Quiero%20saber%20más%20sobre%20agentes%20IA&body=Hola%2C%20acabo%20de%20ver%20los%20demos%20en%20demos.dixsis.com%20y%20me%20interesa%20saber%20más." style="display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:10px;background:rgba(255,255,255,0.10);color:#F4EFE8;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:opacity 0.15s;">✉️ info@dixsis.com</a>
+      <a href="https://www.linkedin.com/company/dixsis/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:10px;background:rgba(255,255,255,0.10);color:#F4EFE8;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:opacity 0.15s;">💼 LinkedIn</a>
     </div>
   </div>
-</section>
+</div>
 
-<section class="block" id="faq">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Preguntas frecuentes</h2>
-      <p>Si tienes otra duda, escríbenos por el chat o a info@dixsis.com.</p>
-    </div>
-    <div class="faq">
-      <details>
-        <summary>¿Qué agentes de IA ofrecen?</summary>
-        <ul>
-          <li><b>Atención al cliente:</b> resuelve consultas frecuentes, gestiona tickets y escala casos complejos con más de 95% de precisión.</li>
-          <li><b>Cobranza:</b> gestiona recordatorios de pago, negocia acuerdos y mantiene una comunicación empática.</li>
-          <li><b>Ventas:</b> contacta prospectos, califica leads y agenda demostraciones de forma autónoma.</li>
-          <li><b>Agenda de citas:</b> agenda, cancela y reagenda citas con varios especialistas y confirma en tu calendario.</li>
-        </ul>
-      </details>
-      <details>
-        <summary>¿Qué diferencia a DIXSIS de otras empresas de tecnología CX?</summary>
-        <p>Combinamos la tecnología líder de Inconcert con décadas de experiencia consultiva en Customer Service y Televentas. No solo implementamos software: diseñamos la estrategia completa para obtener resultados medibles desde el primer día.</p>
-      </details>
-      <details>
-        <summary>¿Cuánto tiempo toma la implementación?</summary>
-        <p>Un agente de IA puede estar productivo en un plazo de 4 a 8 semanas, según la complejidad de tu operación y de las integraciones necesarias. Nuestro equipo consultivo te acompaña en cada etapa.</p>
-      </details>
-      <details>
-        <summary>¿Qué garantiza la certificación ISO/IEC 42001?</summary>
-        <p>La ISO/IEC 42001:2023 es la primera norma internacional certificable para sistemas de gestión de inteligencia artificial. Avala cómo Inconcert gobierna la IA de su plataforma: gestión de riesgos, supervisión humana, manejo responsable de los datos y mejora continua. Es la base sobre la que DIXSIS construye cada agente, para que puedas adoptar IA con la tranquilidad de que opera bajo estándares internacionales.</p>
-      </details>
-      <details>
-        <summary>¿En qué sectores tienen experiencia?</summary>
-        <p>Trabajamos con empresas medianas y grandes de telecomunicaciones, finanzas, salud, educación, retail y seguros. Nuestros agentes y soluciones omnicanal se adaptan a cada vertical.</p>
-      </details>
-    </div>
+<hr class="divider">
+
+<div class="section">
+  <div class="section-head">
+    <div class="section-label">La plataforma</div>
+    <div class="section-title">¿Cómo está construido esto?</div>
   </div>
-</section>
-
-<section class="block alt" id="contacto">
-  <div class="wrap contact">
-    <div>
-      <h2>¿Listo para transformar tu experiencia del cliente?</h2>
-      <p class="lead">En 30 minutos te decimos si tu caso de uso tiene solución, cómo lo construiríamos y cuánto costaría. Escríbenos ahora por el chat de la esquina inferior de tu pantalla, o por el medio que prefieras.</p>
-      <a class="btn btn-dark" href="mailto:info@dixsis.com?subject=Quiero%20saber%20m%C3%A1s%20sobre%20agentes%20IA">Escríbenos a info@dixsis.com</a>
-    </div>
-    <dl class="info">
-      <dt>Correo</dt>
-      <dd><a href="mailto:info@dixsis.com">info@dixsis.com</a></dd>
-      <dt>Teléfono</dt>
-      <dd><a href="tel:+525588544108">+52 55 8854 4108</a></dd>
-      <dt>Oficina</dt>
-      <dd>Blvd. Manuel Ávila Camacho 36, Piso 10, Lomas Virreyes, Miguel Hidalgo, 11000, Ciudad de México</dd>
-    </dl>
+  <div class="how-grid">
+    <div class="how-card"><div class="how-num">01</div><div class="how-title">inAgent</div><div class="how-desc">Motor de agentes IA de inConcert. Configura comportamiento, herramientas y conocimiento sin código.</div></div>
+    <div class="how-card"><div class="how-num">02</div><div class="how-title">GPT-4o mini</div><div class="how-desc">Modelo de lenguaje por defecto. Rápido, económico y potente para todos los casos de uso B2B.</div></div>
+    <div class="how-card"><div class="how-num">03</div><div class="how-title">RAG + Tools</div><div class="how-desc">Los agentes consultan bases de conocimiento en tiempo real y ejecutan acciones vía APIs y JavaScript.</div></div>
+    <div class="how-card"><div class="how-num">04</div><div class="how-title">Omnicanal</div><div class="how-desc">El mismo agente corre en Webchat, WhatsApp, Voz y más — sin duplicar configuración.</div></div>
   </div>
-</section>
-
-</main>
+</div>
 
 <footer>
-  <div class="wrap foot">
-    <div>© 2026 DIXSIS, S.A. de C.V. Todos los derechos reservados.</div>
-    <nav>
-      <a href="https://demos.dixsis.com/">Demos</a>
-      <a href="https://www.linkedin.com/company/dixsis/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://demos.dixsis.com/aviso-privacidad.html">Aviso de privacidad</a>
-    </nav>
-  </div>
+  <p>Demos construidas por <a href="https://dixsis.com" target="_blank">Dixsis</a> · powered by <a href="https://inconcertcc.com" target="_blank">inConcert inAgent</a></p>
+  <p style="margin-top:5px;opacity:0.6;font-size:11px;">Estas conversaciones son demos B2B y pueden contener datos ficticios. · <a href="aviso-privacidad.html">Aviso de privacidad</a></p>
 </footer>
+
+<!-- DIXSIS WEBCHAT -->
+<script>
+(function(){
+  var s=document.createElement("script");
+  s.src="https://s3.us-east-1.amazonaws.com/webchat.us1.bundles/channel-bundles/dc24e94a-8b77-4947-bf45-ea1d9beeaec5/89056d0f-8707-4a1b-8319-26142d73d113/89056d0f-8707-4a1b-8319-26142d73d113.bundle.js";
+  s.async=true;s.charset="UTF-8";
+  s.onload=function(){window.Webchat.init()};
+  document.head.appendChild(s);
+})();
+</script>
+
+<!-- DIXSIS WEBCALL -->
+<script>
+(function(){
+  var s=document.createElement("script");
+  s.src="https://s3.us-east-1.amazonaws.com/livekit.us1.webcall.bundles/channel-bundles/dc24e94a-8b77-4947-bf45-ea1d9beeaec5/19a3a092-f1f2-4b3d-bca0-0aab3f7d7cf7/19a3a092-f1f2-4b3d-bca0-0aab3f7d7cf7.bundle.js";
+  s.charset="UTF-8";
+  s.onload=function(){window.Webcall.init()};
+  document.head.appendChild(s);
+})();
+</script>
+
 
 <!-- AVISO DE COOKIES -->
 <div id="dx-cookies" role="region" aria-label="Aviso de cookies" style="display:none;position:fixed;left:50%;transform:translateX(-50%);bottom:24px;z-index:9998;width:calc(100% - 32px);max-width:520px;background:#3B2A1E;color:#F4EFE8;border-radius:14px;padding:14px 18px;font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.5;box-shadow:0 8px 24px rgba(0,0,0,0.18);align-items:center;gap:14px">
-  <span style="flex:1">Usamos cookies de Google Ads para medir visitas y mejorar nuestras campañas. Puedes desactivarlas desde la configuración de tu navegador. Más información en nuestro <a href="https://demos.dixsis.com/aviso-privacidad.html" style="color:#F4EFE8;text-decoration:underline">Aviso de privacidad</a>.</span>
+  <span style="flex:1">Usamos cookies de Google Ads para medir visitas y mejorar nuestras campañas. Puedes desactivarlas desde la configuración de tu navegador. Más información en nuestro <a href="aviso-privacidad.html" style="color:#F4EFE8;text-decoration:underline">Aviso de privacidad</a>.</span>
   <button type="button" id="dx-cookies-ok" style="flex-shrink:0;background:#F4EFE8;color:#3B2A1E;border:0;border-radius:999px;padding:8px 16px;font:600 13px 'DM Sans',sans-serif;cursor:pointer">Entendido</button>
 </div>
 <style>@media(max-width:1000px){#dx-cookies{bottom:100px!important}}</style>
@@ -388,17 +538,5 @@ footer{padding:36px 0;font-size:13px;color:var(--muted)}
   };
 })();
 </script>
-
-<!-- WEBCHAT DIXSIS (Valeria) -->
-<script>
-(function(){
-  var s=document.createElement("script");
-  s.src="https://s3.us-east-1.amazonaws.com/webchat.us1.bundles/channel-bundles/dc24e94a-8b77-4947-bf45-ea1d9beeaec5/89056d0f-8707-4a1b-8319-26142d73d113/89056d0f-8707-4a1b-8319-26142d73d113.bundle.js";
-  s.async=true;s.charset="UTF-8";
-  s.onload=function(){window.Webchat.init()};
-  document.head.appendChild(s);
-})();
-</script>
-
 </body>
 </html>
